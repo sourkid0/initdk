@@ -1,13 +1,6 @@
 #!/bin/bash
 # -*- ENCODING: UTF-8 -*-
-dirdk="/etc/drowkbot"
-[[ -e '$dirdk/Admin-ID' ]] && {
- read -p "Ingresa tu ID: " idd && echo "${idd}" > /etc/drowkbot/code-bot/Admin-ID
-} || { echo "6234530051" > $dirdk/Admin-ID ; }
-[[ -e '$dirdk/token' ]] && {
- read -p "Ingresa tu token: " token && echo "${token}" > /etc/drowkbot/code-bot/token
-} || { echo "null" >$dirdk/token ; }
-
+mkdir -m 777 -p /etc/drowkbot
 CIDdir=/etc/drowkbot && [[ ! -d ${CIDdir} ]] && mkdir -m 777 -p ${CIDdir}
 echo "ᎠꭱꮻꮃᏦᏀᏴꮻꭲ">$CIDdir/.botname
 
